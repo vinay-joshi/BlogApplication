@@ -1,0 +1,12 @@
+﻿@model SpecialSymbol.Models.Post
+@{ 
+    Layout = "_Layout";
+}
+
+<div class="blog-post">
+    <h2 class="blog-post-title">@Model.Title</h2>
+    <p class="blog-post-meta">@Model.PostedDate by <a href="#">@Model.Author</a></p>
+
+    <p>@Model.Body</p>
+
+</div><!-- /.blog-post -->

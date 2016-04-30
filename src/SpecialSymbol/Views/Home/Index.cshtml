@@ -1,0 +1,21 @@
+﻿@model SpecialSymbol.Models.Post[]
+
+@foreach (var post in Model)
+{
+    @Html.Partial("_Post" ,post)
+}
+
+<nav>
+    <ul class="pager">
+        @if (ViewBag.HasPreviousPage == true)
+        {
+            <li><a href="@Url.Action("Index", new { page = ViewBag.PreviousPage })">Previous</a></li>
+        }
+        @if (ViewBag.HasNextPage == true)
+        {
+            <li><a href="@Url.Action("Index",new { page = ViewBag.NextPage })">Next</a></li>
+        }
+    </ul>
+    PreviousPage: @ViewBag.PreviousPage
+    Next Page :@ViewBag.NextPage
+</nav>

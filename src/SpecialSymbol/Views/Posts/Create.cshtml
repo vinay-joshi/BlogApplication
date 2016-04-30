@@ -1,0 +1,21 @@
+﻿@addTagHelper "*,Microsoft.AspNet.Mvc.TagHelpers"
+@model SpecialSymbol.Models.Post
+@{
+    Layout = "_Layout";
+}
+<form asp-action="Create">
+    <div asp-validation-summary="ValidationSummary.All" class="input-validatoin-error"></div>
+
+    <div class="form-group">
+        <label asp-for="Title"></label>
+        <input type="text" asp-for="Title" class="form-control" />
+        <span asp-validation-for="Title" class="field-validatoin-error"></span>        
+    </div>
+    <div class="form-group has-error">
+        <label asp-for="Body"></label>
+        <input type="text" asp-for="Body" class="form-control" />
+        <span asp-validation-for="Body" class="field-validatoin-error"></span>        
+    </div>
+    <button type="submit" class="btn btn-default">Create Post</button>
+</form>
+

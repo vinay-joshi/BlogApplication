@@ -1,0 +1,10 @@
+﻿@model SpecialSymbol.Models.ArchivedPostsSummary[]
+<ol class="list-unstyled">
+    @foreach (var item in Model)
+    {
+        <li>
+            <a href="#"> @item.Date.ToString("MMM,yyyy")</a>
+            <span>(@item.Count)</span>
+        </li>
+    }
+</ol>
